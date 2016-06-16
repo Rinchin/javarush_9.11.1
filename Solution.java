@@ -8,6 +8,18 @@ package com.javarush.test.level09.lesson11.home01;
 public class Solution {
 
     public static void main(String[] args) {
-        divisionByZero();
+        try
+        {
+            divisionByZero();
+        }
+        catch (ArithmeticException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void divisionByZero(){
+        int a = 49/0;
+        System.out.println(a);
     }
 }
